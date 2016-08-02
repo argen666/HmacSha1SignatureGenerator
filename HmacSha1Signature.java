@@ -28,7 +28,7 @@ public class HmacSha1Signature {
 
     public static void main(String[] args) throws Exception {
         String endPoint = "/accounts";
-        SimpleDateFormat sf = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss z", Locale.ENGLISH);
+        SimpleDateFormat sf = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.ENGLISH);
         sf.setTimeZone(TimeZone.getTimeZone("GMT"));
         String date = sf.format(new Date());
         String checksum = calculateChecksum(endPoint, date);
